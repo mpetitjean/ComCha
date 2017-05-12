@@ -91,7 +91,7 @@ cellRadius95 = 2371
 
 
 % 4.4 Shitty model
-corShad = corShadowing(length(shadowing)*1000,vmoy,std(shadowing),rc,time(2)-time(1));
+corShad = corShadowing(length(shadowing)*10,vmoy,std(shadowing),rc,time(2)-time(1));
 figure('name','Shadowing','NumberTitle','off')
 subplot(1,2,1)
 plot(log10(dist),shadowing)
@@ -144,17 +144,12 @@ plot(threshold,AFD);
 
 
 %% last
+figure
 k = [30 10 5 2];
 Nbps = 1;
 precision = 1e3;
 ratio_min = -5;
 ratio_max = 10;
-step = 1;
-ber = arrayfun(@(x) main_step1(Nbps,precision, ratio_min, step, ratio_max, x),k,'un',0);
-figure
-load('ber_th_Nbps1.mat');
-semilogy(ebno2PAM(1:16),ber2PAM(1:16), '-')
-hold on;
-grid on;
-cellfun(@(x) semilogy(ratio_min:step:ratio_max,x),ber)
-legend('Theory','k = 30', 'k = 10', 'k = 5', 'k = 2');
+s
+main_step1(Nbps,precision, ratio_min, step, ratio_max, k)
+ber = arrayfun(@(x) main_step1(

@@ -1,0 +1,136 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
+\definecolor{mycolor3}{rgb}{0.92900,0.69400,0.12500}%
+\definecolor{mycolor4}{rgb}{0.49400,0.18400,0.55600}%
+\definecolor{mycolor5}{rgb}{0.46600,0.67400,0.18800}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=11.028in,
+height=5.832in,
+at={(1.85in,0.787in)},
+scale only axis,
+xmin=-5,
+xmax=10,
+ymode=log,
+ymin=1e-06,
+ymax=1,
+yminorticks=true,
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+yminorgrids,
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1]
+  table[row sep=crcr]{%
+-5	0.213228018357621\\
+-4	0.186113817483389\\
+-3	0.158368318809598\\
+-2	0.130644488522829\\
+-1	0.103759095953406\\
+0	0.0786496035251425\\
+1	0.0562819519765414\\
+2	0.0375061283589259\\
+3	0.0228784075610853\\
+4	0.0125008180407375\\
+5	0.00595386714777867\\
+6	0.0023882907809328\\
+7	0.000772674815378443\\
+8	0.000190907774075993\\
+9	3.36272284196176e-05\\
+10	3.87210821552205e-06\\
+};
+\addlegendentry{Theory}
+
+\addplot [color=mycolor2]
+  table[row sep=crcr]{%
+-5	0.214277\\
+-4	0.187666\\
+-3	0.160394\\
+-2	0.132777\\
+-1	0.106956\\
+0	0.0822359999999999\\
+1	0.059876\\
+2	0.041164\\
+3	0.0267669999999999\\
+4	0.015647\\
+5	0.00854899999999998\\
+6	0.004014\\
+7	0.00172\\
+8	0.000671000000000001\\
+9	0.000226\\
+10	4.9e-05\\
+};
+\addlegendentry{k = 30}
+
+\addplot [color=mycolor3]
+  table[row sep=crcr]{%
+-5	0.216841\\
+-4	0.1911\\
+-3	0.164759\\
+-2	0.138906\\
+-1	0.113055\\
+0	0.0898819999999998\\
+1	0.0684720000000001\\
+2	0.0500090000000001\\
+3	0.0351769999999999\\
+4	0.023271\\
+5	0.0153319999999999\\
+6	0.00928699999999997\\
+7	0.005433\\
+8	0.003082\\
+9	0.001724\\
+10	0.00085\\
+};
+\addlegendentry{k = 10}
+
+\addplot [color=mycolor4]
+  table[row sep=crcr]{%
+-5	0.219549\\
+-4	0.194937\\
+-3	0.16943\\
+-2	0.143957\\
+-1	0.119811\\
+0	0.0969889999999999\\
+1	0.0766459999999999\\
+2	0.0588000000000001\\
+3	0.0441129999999999\\
+4	0.032469\\
+5	0.023407\\
+6	0.016625\\
+8	0.008604\\
+9	0.00619299999999998\\
+10	0.00479499999999999\\
+};
+\addlegendentry{k = 5}
+
+\addplot [color=mycolor5]
+  table[row sep=crcr]{%
+-5	0.230611\\
+-3	0.187104\\
+-2	0.165541\\
+-1	0.145066\\
+0	0.126306\\
+1	0.108947\\
+2	0.0945750000000001\\
+3	0.080925\\
+4	0.069983\\
+5	0.0609350000000001\\
+6	0.0537389999999999\\
+7	0.047146\\
+8	0.04231\\
+9	0.038125\\
+10	0.035085\\
+};
+\addlegendentry{k = 2}
+
+\end{axis}
+\end{tikzpicture}%
